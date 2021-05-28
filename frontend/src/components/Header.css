@@ -1,8 +1,24 @@
 .header {
-  height: 260px;
+  height: 300px;
   padding-top: 4rem;
   min-height: 3rem;
   color: #fff;
-  background-image: url(https://images.pexels.com/photos/3844788/pexels-photo-3844788.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-image: url(https://images.pexels.com/photos/2179483/pexels-photo-2179483.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
   background-size: cover;
+  background-position: 50% 35%;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__title {
+  padding: 1rem 1rem;
+  font-size: 1.6rem;
+}
+
+.header__subtitle {
+  padding: 1rem 1rem;
+  font-size: 1.3rem;
 }

@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  max-width: 1440px;
+}
+
+.homescreen {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.homescreen__title {
+  font-size: 1.5rem;
+  color: #171717;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  padding: 40px 0px;
+}
+
+.homescreen__paintings {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+/* 
+@media (max-width: 1218px) {
+  .homescreen {
+    max-width: 1000px;
+  }
+} */

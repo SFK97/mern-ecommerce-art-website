@@ -3,7 +3,8 @@ const products = [
     name: "Galaxy One",
     imageUrl:
       "https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    description: "description",
+    description:
+      "A beautiful mixture of blue and purple presented in a wonderful pattern, depicting a galaxy",
     price: 399,
   },
   {

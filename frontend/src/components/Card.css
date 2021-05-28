@@ -1,0 +1,86 @@
+.card {
+  color: white;
+  background-image: url(https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: cover;
+  padding: 10rem 0 0;
+  max-width: 35ch;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  transition: transform 500ms ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card__wrapper {
+  --padding: 1.5rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    hsl(0 0% 0% /0),
+    hsl(0 0% 0% /0.3) 20%,
+    hsl(0 0% 0% /1)
+  );
+  transform: translateY(90%);
+  transition: transform 500ms ease;
+}
+
+.card__wrapper > * {
+  opacity: 0;
+  transition: opacity 500ms linear;
+}
+
+.card:hover .card__wrapper {
+  transform: translateY(0);
+}
+
+.card:hover .card__wrapper > * {
+  opacity: 1;
+}
+
+.card__title {
+  position: relative;
+  /* width: max-content = only use with one line sentences */
+  width: max-content;
+  /* max-width: 100% prevents overflow with longer text */
+  max-width: 100%;
+}
+
+.card__title::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--padding) * -1);
+  bottom: -4px;
+  height: 3px;
+  background: #2a9d8f;
+  width: calc(100% +var(--padding));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 500ms ease;
+}
+
+.card:hover .card__title::after {
+  transform: scaleX(1);
+}
+
+.card__body {
+  padding: 1rem 0;
+  color: rgb(255 255 255 /0.9);
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  background-color: #2a9d8f;
+  border-radius: 0.25em;
+  padding: 0.5em 1.25em;
+  font-weight: bold;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #e76f51;
+}

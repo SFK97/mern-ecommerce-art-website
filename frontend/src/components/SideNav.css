@@ -1,15 +1,100 @@
 .sidenav {
-  width: 70%;
+  width: 40%;
   height: 100vh;
-  background: white;
+  background: #e76f51;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 200;
   transform: translateX(-100%);
   transition: all 0.3 ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidenav > i {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  font-size: 1.6rem;
+  margin: 1rem 1rem;
+  cursor: pointer;
+  color: #f4f4f4;
+}
+.sidenav > i:hover {
+  color: #264653;
 }
 
 .sidenav.toggle {
   transform: translateX(0);
+}
+
+.sidenav__title {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  padding: 1rem 1rem;
+  cursor: pointer;
+  color: #f4f4f4;
+}
+
+.sidenav__links {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.sidenav__links > li {
+  display: flex;
+  align-items: center;
+}
+
+.sidenav__links > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  padding: 1rem;
+
+  text-decoration: none;
+  color: #f4f4f4;
+  font-size: 1.6rem;
+}
+
+.sidenav__links > li > a:hover {
+  background: #222;
+}
+
+.sidenav__links > li > a > i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4px;
+}
+
+.sidenav__cartbadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 6px;
+}
+
+@media (min-width: 961px) {
+  .sidenav.toggle {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 640px) {
+  .sidenav {
+    width: 300px;
+  }
 }
