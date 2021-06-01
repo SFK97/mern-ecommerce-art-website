@@ -1,7 +1,8 @@
 import Card from "../components/Card";
 import Header from "../components/Header";
 import HorizontalLine from "../components/HorizontalLine";
-import Painting from "../components/Painting";
+import Slider from "../components/ImageSlider/Slider";
+
 import "./HomeScreen.css";
 
 const HomeScreen = () => {
@@ -13,6 +14,13 @@ const HomeScreen = () => {
         <HorizontalLine />
         <div className="homescreen__paintings">
           <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
+        <div className="homescreen__slider">
+          <div className="featured__products">Featured Products</div>
+          <Slider />
         </div>
       </div>
     </container>

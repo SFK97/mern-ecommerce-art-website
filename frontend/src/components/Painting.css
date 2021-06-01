@@ -1,0 +1,91 @@
+.painting {
+  width: 300px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #171717;
+  transition: 500ms ease;
+}
+
+.painting:hover {
+  transition: 500ms ease;
+  background: #fb9c67;
+}
+
+.painting__wrap {
+  position: relative;
+  top: 0;
+}
+
+.painting__wrap > img {
+  display: block;
+  width: 100%;
+}
+
+.painting__overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  opacity: 0;
+  transition: 500ms ease;
+}
+
+.painting__overlay::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #4debf3;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 500ms ease;
+}
+
+.painting:hover .painting__overlay::before {
+  transform: scaleX(1);
+}
+
+.painting:hover .painting__wrap .painting__overlay {
+  opacity: 1;
+  transition: 500ms ease;
+}
+
+.painting__description {
+  font-size: 0.8rem;
+  padding-left: 4px;
+}
+
+.painting__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.painting__info > p {
+  margin-bottom: 8px;
+}
+
+.painting__name {
+  padding-top: 10px;
+  font-size: 1.3rem;
+  overflow: hidden;
+}
+
+.painting__price {
+  font-weight: bold;
+}

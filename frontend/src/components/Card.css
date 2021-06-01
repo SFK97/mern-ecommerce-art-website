@@ -3,7 +3,8 @@
   background-image: url(https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
   background-size: cover;
   padding: 10rem 0 0;
-  max-width: 35ch;
+
+  width: 100%;
   border-radius: 0.5rem;
   overflow: hidden;
 
@@ -83,4 +84,118 @@
 .button:hover,
 .button:focus {
   background-color: #e76f51;
+}
+
+@media (max-width: 1460px) {
+  .card {
+    width: 320px;
+  }
+}
+
+@media (max-width: 1380px) {
+  .card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1298px) {
+  .card {
+    width: 290px;
+  }
+}
+
+@media (max-width: 1258px) {
+  .card {
+    width: 280px;
+  }
+}
+
+@media (max-width: 1232px) {
+  .card {
+    width: 380px;
+  }
+}
+
+@media (max-width: 1218px) {
+  .card {
+    width: 340px;
+  }
+}
+
+@media (max-width: 1108px) {
+  .card {
+    width: 320px;
+  }
+}
+
+@media (max-width: 1046px) {
+  .card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 976px) {
+  .card {
+    width: 280px;
+  }
+}
+
+@media (max-width: 950px) {
+  .card {
+    width: 400px;
+  }
+}
+
+@media (max-width: 866px) {
+  .card {
+    width: 350px;
+  }
+}
+
+@media (max-width: 760px) {
+  .card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 666px) {
+  .card {
+    width: 280px;
+  }
+}
+
+@media (max-width: 630px) {
+  .card {
+    width: 550px;
+  }
+}
+
+@media (max-width: 614px) {
+  .card {
+    width: 530px;
+  }
+}
+
+@media (max-width: 590px) {
+  .card {
+    width: 510px;
+  }
+}
+
+@media (max-width: 562px) {
+  .card {
+    width: 480px;
+  }
+}
+
+@media (max-width: 546px) {
+  .card {
+    width: 460px;
+  }
+}
+
+@media (max-width: 522px) {
+  .card {
+    width: 440px;
+  }
 }
