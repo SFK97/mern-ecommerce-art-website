@@ -1,4 +1,5 @@
 import Card from "../components/Card";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import HorizontalLine from "../components/HorizontalLine";
 import Slider from "../components/ImageSlider/Slider";
@@ -23,6 +24,7 @@ const HomeScreen = () => {
           <Slider />
         </div>
       </div>
+      <Footer />
     </container>
   );
 };
