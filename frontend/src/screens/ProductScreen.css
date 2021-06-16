@@ -1,73 +1,167 @@
-.productscreen {
-  max-width: 1440px;
-  max-height: 400px;
+.box__container {
   display: flex;
-  margin: 5rem auto;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: #ccc;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.productscreen__left {
+.box__container .box {
   display: flex;
-  flex: 0.8;
-}
-
-.left__image {
-  margin: 1rem;
-  flex: 0.6;
-}
-
-.left__image > img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.left__info {
-  margin: 1rem;
-  flex: 0.4;
-  background-color: antiquewhite;
-  height: fit-content;
-  font-size: 0.9rem;
-}
-
-.left__name {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.left__info > p,
-.right__info > p {
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  max-width: 1400px;
   padding: 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 2rem;
+  box-shadow: 0 0.3rem 0.5rem #3337;
 }
 
-.left__info > p:last-child,
-.right__info > p:last-child {
-  border: none;
+.box__container .box .image__container {
+  text-align: center;
+  padding: 1rem 2rem;
+  max-width: 40rem;
 }
 
-.productscreen__right {
-  flex: 0.2;
+.box__container .box .image__container .left__image {
+  box-shadow: 0 0.3rem 0.5rem #3337;
+  border: 0.5rem solid #fff;
+  padding: 2rem 1rem;
+  background: #eee;
 }
 
-.right__info {
-  width: 240px;
-  margin: 1rem;
-  background: antiquewhite;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+.box__container .box .image__container .left__image img {
+  height: 30rem;
 }
 
-.right__info > p {
+.box__container .box .image__container .below__images {
+  padding: 1rem 0;
+  display: flex;
+}
+
+.box__container .box .image__container .below__images > img {
+  box-shadow: 0 0.3rem 0.5rem #3337;
+  border: 0.5rem solid #fff;
   padding: 1rem;
-  font-size: 0.8rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.right__info > p > button {
-  grid-column: 1/-1;
-  padding: 10px 16px;
-  background: black;
-  color: aliceblue;
-  border: 1px solid #171717;
+  background: #eee;
+  margin: 1rem;
+  height: 8rem;
   cursor: pointer;
+}
+.box__container .box .image__container .below__images > img.active,
+.box__container .box .image__container .below__images > img:hover {
+  background: #ccc;
+}
+
+.box__container .box .content {
+  padding: 1rem;
+}
+
+.box__container .box .content .title {
+  font-size: 1.6rem;
+  color: #333;
+  padding: 1rem 0;
+  text-transform: uppercase;
+}
+
+.box__container .box .content .price {
+  color: #333;
+  border-top: 0.2rem solid #333;
+  border-bottom: 0.2rem solid #333;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  display: inline-block;
+}
+
+.box__container .box .content p {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: #666;
+}
+
+.box__container .box .content form .dropdown span {
+  font-size: 1.6rem;
+  display: block;
+  color: #333;
+  padding: 1rem 0;
+}
+
+.box__container .box .content form .dropdown select {
+  width: 100%;
+  height: 3rem;
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.box__container .box .content form .quantity {
+  padding: 1.6rem 0;
+}
+
+.box__container .box .content form .quantity span {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.box__container .box .content form .quantity input {
+  height: 3rem;
+  width: 4rem;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #666;
+  margin: 0 1rem;
+}
+
+.box__container .box .content .btn {
+  height: 4rem;
+  width: 18rem;
+  background: #333;
+  color: #fff;
+  margin-right: 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.box__container .box .content .btn:hover {
+  background: #666;
+}
+
+.box__container .box .content .stock {
+  color: #666;
+  font-size: 1.6rem;
+}
+
+.box__container .box .content .stock i {
+  color: green;
+}
+
+@media (max-width: 1216px) {
+  .box__container .box .content .stock {
+    display: flex;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 930px) {
+  .box__container {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    font-size: 55%;
+  }
+  .box__container .box {
+    flex-flow: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .box__container .box .image__container .left__image img {
+    height: auto;
+    width: 100%;
+  }
 }

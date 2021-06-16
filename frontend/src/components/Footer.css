@@ -23,7 +23,6 @@
 }
 
 .menu__container {
-  display: flex;
   width: 250px;
   height: 50px;
   position: relative;
@@ -33,14 +32,9 @@
   display: flex;
   justify-content: space-between;
   width: 250px;
-  position: absolute;
-  right: 0;
 }
 
 .social__menu > i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 3rem;
   cursor: pointer;
   color: white;

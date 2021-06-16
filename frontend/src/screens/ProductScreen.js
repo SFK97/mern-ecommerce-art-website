@@ -1,35 +1,70 @@
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 import "./ProductScreen.css";
 
 const ProductScreen = () => {
   return (
-    <div className="productscreen">
-      <div className="productscreen__left">
-        <div className="left__image">
-          <img
-            src="https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            alt="product"
-          />
-        </div>
-        <div className="left__info">
-          <p className="left__name">Product</p>
-          <p>Price: £99.99</p>
-          <p>Description: Lorem Ipsum</p>
+    <>
+      <Header />
+      <div className="box__container">
+        <div className="box">
+          <div className="image__container">
+            <div className="left__image">
+              <img
+                src="https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                alt="product"
+              />
+            </div>
+            <div className="below__images">
+              <img
+                className="active"
+                src="https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                alt="product"
+              />
+              <img
+                src="https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                alt="product"
+              />
+              <img
+                src="https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                alt="product"
+              />
+            </div>
+          </div>
+          <div className="content">
+            <h3 className="title">Product</h3>
+            <div className="price">£99.99</div>
+            <p>
+              Aliqua enim sint eu nostrud eiusmod excepteur laborum id ea
+              consectetur qui fugiat sint.
+            </p>
+            <form>
+              <div class="dropdown">
+                <span> Canvas Size : </span>
+                <select name="" id="">
+                  <option value="small">10" x 10"</option>
+                  <option value="medium">16" x 16"</option>
+                  <option value="large">20" x 20"</option>
+                </select>
+              </div>
+              <div className="quantity">
+                <span> Quantity : </span>
+                <input type="number" value="1"></input>
+              </div>
+            </form>
+            <a href="/">
+              <button className="btn">
+                <i className="fas fa-shopping-cart"></i> Add To Cart
+              </button>
+            </a>
+            <span className="stock">
+              <i className="fas fa-check"></i> In Stock
+            </span>
+          </div>
         </div>
       </div>
-      <div className="productscreen__right">
-        <div className="right__info">
-          <p>
-            Price: <span>£99.99</span>
-          </p>
-          <p>
-            Status: <span>In Stock</span>
-          </p>
-          <p>
-            <button type="button">Add To Cart</button>
-          </p>
-        </div>
-      </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
