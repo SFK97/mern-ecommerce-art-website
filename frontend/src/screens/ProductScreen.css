@@ -1,3 +1,7 @@
+:root {
+  font-size: clamp(0.4em, 0.3em + 1vw, 1em);
+}
+
 .box__container {
   display: flex;
   align-items: center;
@@ -145,14 +149,14 @@
 }
 
 @media (max-width: 930px) {
-  .box__container {
-    font-size: 55%;
+  .box > p {
+    font-size: 0.2em;
   }
 }
 
 @media (max-width: 768px) {
   .box {
-    font-size: 55%;
+    font-size: 1em;
   }
   .box__container .box {
     flex-flow: column;
