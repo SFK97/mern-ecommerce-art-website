@@ -1,19 +1,44 @@
 import "./Footer.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Footer = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 500) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+    window.addEventListener("scroll", toggleVisibility);
+
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
   return (
     <div className="footer__container">
+      {/* <Link className="footer__logo" to="/">
+        Mern Art
+      </Link> */}
       <div className="footer__wrapper">
-        <Link className="footer__logo" to="/">
-          Mern Art
-        </Link>
         <div className="menu__container">
           <div className="social__menu">
             <i class="fab fa-facebook-square"></i>
             <i class="fab fa-twitter-square"></i>
             <i class="fab fa-instagram-square"></i>
-            <i class="fas fa-angle-double-up"></i>
+            {isVisible && (
+              <i class="fas fa-angle-double-up" onClick={scrollToTop}></i>
+            )}
           </div>
         </div>
       </div>
@@ -26,9 +51,7 @@ const Footer = () => {
           <li>Art for your business</li>
         </ul>
       </div>
-      <div className="rights">
-        Mern Art © {new Date().getFullYear()} All rights reserved.
-      </div>
+      <div className="rights">Mern Art © {new Date().getFullYear()}</div>
     </div>
   );
 };

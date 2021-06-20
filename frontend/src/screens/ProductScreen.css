@@ -1,5 +1,5 @@
 :root {
-  font-size: clamp(0.4em, 0.3em + 1vw, 1em);
+  font-size: clamp(1em, 1em + 1vw, 1em);
 }
 
 .box__container {
@@ -43,6 +43,8 @@
 .box__container .box .image__container .below__images {
   padding: 1rem 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box__container .box .image__container .below__images > img {
