@@ -2,7 +2,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "./ProductScreen.css";
 
-const ProductScreen = () => {
+const ProductScreen = ({ isVisible }) => {
   return (
     <>
       <Header />
@@ -36,7 +36,11 @@ const ProductScreen = () => {
             <div className="price">£99.99</div>
             <p>
               Aliqua enim sint eu nostrud eiusmod excepteur laborum id ea
-              consectetur qui fugiat sint.
+              consectetur qui fugiat sint. Aliqua enim sint eu nostrud eiusmod
+              excepteur laborum id ea consectetur qui fugiat sint. Aliqua enim
+              sint eu nostrud eiusmod excepteur laborum id ea consectetur qui
+              fugiat sint. Aliqua enim sint eu nostrud eiusmod excepteur laborum
+              id ea consectetur qui fugiat sint.
             </p>
             <form>
               <div class="dropdown">
@@ -63,7 +67,7 @@ const ProductScreen = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer isVisible={isVisible} />
     </>
   );
 };

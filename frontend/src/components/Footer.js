@@ -36,9 +36,11 @@ const Footer = () => {
             <i class="fab fa-facebook-square"></i>
             <i class="fab fa-twitter-square"></i>
             <i class="fab fa-instagram-square"></i>
-            {isVisible && (
-              <i class="fas fa-angle-double-up" onClick={scrollToTop}></i>
-            )}
+            <i
+              class="fas fa-angle-double-up"
+              onClick={scrollToTop}
+              isVisible={isVisible}
+            ></i>
           </div>
         </div>
       </div>

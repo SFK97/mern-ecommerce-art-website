@@ -14,7 +14,7 @@
 
 .box__container .box {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   background: #fff;
   max-width: 1400px;
@@ -26,7 +26,7 @@
 .box__container .box .image__container {
   text-align: center;
   padding: 1rem 2rem;
-  max-width: 40rem;
+  max-width: 30rem;
 }
 
 .box__container .box .image__container .left__image {
@@ -37,7 +37,7 @@
 }
 
 .box__container .box .image__container .left__image img {
-  height: 30rem;
+  height: 20rem;
 }
 
 .box__container .box .image__container .below__images {
@@ -66,9 +66,10 @@
 }
 
 .box__container .box .content .title {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #333;
-  padding: 1rem 0;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
   text-transform: uppercase;
 }
 
@@ -76,28 +77,29 @@
   color: #333;
   border-top: 0.2rem solid #333;
   border-bottom: 0.2rem solid #333;
-  font-size: 1.6rem;
-  padding: 0.5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
   display: inline-block;
 }
 
 .box__container .box .content p {
   padding: 1rem 0;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #666;
+  max-width: 40rem;
 }
 
 .box__container .box .content form .dropdown span {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   display: block;
   color: #333;
   padding: 1rem 0;
 }
 
 .box__container .box .content form .dropdown select {
-  width: 100%;
-  height: 3rem;
-  font-size: 1.5rem;
+  width: 50%;
+  height: 2rem;
+  font-size: 1.2rem;
   color: #666;
 }
 
@@ -106,28 +108,28 @@
 }
 
 .box__container .box .content form .quantity span {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: #333;
 }
 
 .box__container .box .content form .quantity input {
-  height: 3rem;
-  width: 4rem;
+  height: 2rem;
+  width: 3rem;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: #666;
   margin: 0 1rem;
 }
 
 .box__container .box .content .btn {
   height: 4rem;
-  width: 18rem;
+  width: 12rem;
   background: #333;
   color: #fff;
   margin-right: 1rem;
   border: none;
   cursor: pointer;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .box__container .box .content .btn:hover {
@@ -136,7 +138,7 @@
 
 .box__container .box .content .stock {
   color: #666;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .box__container .box .content .stock i {
