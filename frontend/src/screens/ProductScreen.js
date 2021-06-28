@@ -1,11 +1,13 @@
+import "./ProductScreen.css";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import "./ProductScreen.css";
+import { useState } from "react";
 
-const ProductScreen = ({ isVisible }) => {
+const ProductScreen = ({ isVisible, click, bg }) => {
+  console.log(bg);
   return (
     <>
-      <Header />
+      <Header bg={bg} />
       <div className="box__container">
         <div className="box">
           <div className="image__container">
@@ -56,11 +58,9 @@ const ProductScreen = ({ isVisible }) => {
                 <input type="number" value="1"></input>
               </div>
             </form>
-            <a href="/">
-              <button className="btn">
-                <i className="fas fa-shopping-cart"></i> Add To Cart
-              </button>
-            </a>
+            <button className="btn" onClick={click}>
+              <i className="fas fa-shopping-cart"></i> Add To Cart
+            </button>
             <span className="stock">
               <i className="fas fa-check"></i> In Stock
             </span>

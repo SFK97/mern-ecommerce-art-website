@@ -1,7 +1,6 @@
 import "./CartScreen.css";
 import CartItem from "../components/Cart/CartItem";
 import Header from "../components/Header";
-import Subtotal from "../components/Cart/Subtotal";
 
 const CartScreen = () => {
   return (
@@ -13,7 +12,33 @@ const CartScreen = () => {
           <CartItem />
         </div>
         <div className="cartscreen__right">
-          <Subtotal />
+          <div className="subtotal">
+            <div className="subtotal__title">Your Order</div>
+            <div className="subtotal__total">
+              TOTAL
+              <p>£299.99</p>
+            </div>
+
+            <div className="checkout__btn">Go to secure checkout</div>
+            <div className="promocode">
+              <label className="promocode__label">
+                Enter a promotional code
+              </label>
+              <input
+                className="promocode__field"
+                type="text"
+                maxlength="5"
+              ></input>
+              <button className="promocode__btn">Apply</button>
+            </div>
+            <div className="payments">
+              <i src=""></i>
+              {/* <i class="fab fa-cc-stripe"></i> */}
+            </div>
+            {/* Purchase button */}
+            {/* Have a promocode? */}
+            {/*  */}
+          </div>
         </div>
       </div>
     </>
