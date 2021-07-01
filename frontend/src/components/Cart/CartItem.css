@@ -2,12 +2,17 @@
   width: 100%;
   padding: 1rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
   background: #fff;
   border-radius: 2px;
   gap: 8px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   place-items: center;
+}
+
+.cartitem__image {
+  width: 100px;
+  padding: 1rem;
 }
 
 .cartitem__name {
@@ -17,6 +22,9 @@
 
 .cartitem__name:hover {
   color: #dd219e;
+}
+.cartitem__name p {
+  padding: 0.5rem;
 }
 
 .cartitem__select {
@@ -33,4 +41,10 @@
 
 .cartitem__delete:hover {
   transform: scale(1.2);
+}
+
+@media (max-width: 960px) {
+  .cartitem {
+    margin-bottom: 2rem;
+  }
 }

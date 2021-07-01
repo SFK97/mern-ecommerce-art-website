@@ -12,14 +12,16 @@ const cartItem = () => {
       </div>
       <Link to={`/product/${111}`} className="cartitem__name">
         <p>Product</p>
+        <p>Description</p>
+        <p>Canvas Size</p>
       </Link>
       <p className="cartitem__price">£299.99</p>
-      {/* <select>
+      <select>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
-      </select> */}
+      </select>
       <button className="cartitem__delete">
         <i class="fas fa-times"></i>
       </button>
